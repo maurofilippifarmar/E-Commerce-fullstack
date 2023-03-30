@@ -41,8 +41,8 @@ export const openStripeChekoutPage = async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       line_items,
       mode: "payment",
-      success_url: `https://e-store-fullstack-app-y3j0.onrender.com/#/cart?success=true`,
-      cancel_url: `https://e-store-fullstack-app-y3j0.onrender.com/#/cart?success=false`,
+      success_url: `https://e-commerce-full-stack-app.onrender.com/#/cart?success=true`,
+      cancel_url: `https://e-commerce-full-stack-app.onrender.com/#/cart?success=false`,
     });
 
     res.json({ success: true, url: session.url });
